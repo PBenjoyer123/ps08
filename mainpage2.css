@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.hero {
+    
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Możesz dostosować wysokość sekcji hero */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+
+.hero-content {
+    max-width: 600px;
+    background-image: url('p1.jpg');
+    border-radius: 10px;
+    color: black;
+    padding: 60px;
+    border: 4px solid black;
+    position: absolute;
+    width: 600px;
+    height: 358px;
+}
+
+.background-image {
+    background-image: url('background.jpg'); /* Dodaj tło dla całej strony */
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Umieść je za resztą zawartości */
+}
+
+
+.container {
+    position: relative;
+    padding: 20px;
+}
+
+.products-wrapper {
+    display: flex; /* Ustaw kontener produktów na flexbox */
+    overflow-x: auto; /* Dodaj przewijanie poziome */
+}
+
+.product {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: white;
+    width: 400px;
+    margin-right: 40px;
+    margin-bottom: 40px; /* Dodaj margines na dół, aby uniknąć nakładania się na siebie */
+    flex-shrink: 0;
+}
+
+.product a {
+    text-decoration: none;
+    display: block; /* Spraw, że cały obszar produktu będzie klikalny */
+}
+
+.product img {
+    width: 100%;
+    border-radius: 15px 15px 0 0; /* Zaokrąglij tylko górne rogi zdjęcia */
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.product p.price {
+    text-align: center;
+    margin: 0; /* Resetuj margines */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.product p.description {
+    text-align: center;
+    margin: 0; /* Resetuj margines */
+    padding: 10px;
+}
+
+.product p.price,
+.product p.description {
+    color: black; /* lub inny kolor, który chcesz zastosować */
+}
+
+.prev,
+.next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: lightgrey;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+    border-radius: 10px;
+}
+
+.next {
+    right: 10px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-column, .center-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Zmienione na align-items: flex-start */
+}
+
+.social-icons {
+    display: flex;
+    align-items: center; /* Dodane */
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Dodatkowy styl dla klikalnych elementów */
+.left-column h3, .center-column h3, .social-icons a {
+    cursor: pointer;
+    color: #000000;
+}
+
+.left-column h3:hover, .center-column h3:hover, .social-icons a:hover {
+    color: #000000;
+}
+
+.right-column input[type="email"] {
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
