@@ -8,25 +8,37 @@
     <link rel="stylesheet" href="user.css">
 </head>
 <body>
-    <div class="sing">
-        <h1></h1>
+    <div class="container">
+        <div class="panels">
+            <div class="login-panel active">
+                <h2>Zaloguj się</h2>
+                <form action="#">
+                    <input type="email" placeholder="E-mail" required>
+                    <input type="password" placeholder="Hasło" required>
+                    <button type="submit">Zaloguj się</button>
+                </form>
+                <p>Nie masz jeszcze konta?<a href="#" onclick="togglePanel()">Zarejestruj się tutaj</a></p>
+            </div>
+            <div class="register-panel">
+                <h2>Zarejestruj się</h2>
+                <form action="#">
+                    <input type="email" placeholder="E-mail" required>
+                    <input type="password" placeholder="Hasło" required>
+                    <input type="password" placeholder="Potwierdź hasło" required>
+                    <button type="submit">Zarejestruj się</button>
+                </form>
+                <p>Masz już konto? <a href="#" onclick="togglePanel()">Zaloguj się tutaj</a></p>
+            </div>
+        </div>
     </div>
-    <section class="container">
-        <form class="login-form">
-            <h1>Zaloguj się</h1>
-            <div class="login-inputs">
-                <label for="login-username">E-mail:</label>
-                <input type="email" name="login-username" id="login-username">
-            </div>
-            <div class="login-inputs">
-                <label for="login-password">Hasło:</label>
-                <input type="password" name="login-password" id="login-password">
-            </div>
-            <button class="btn">Zaloguj się</button>
-            <a href="rejestracja.html">Nie masz konta? Załóż je!</a>
-        </form>
-        <ul class="notif-list"></ul>
-    </section>
+
+    <script>
+        function togglePanel() {
+            const panels = document.querySelector('.panels');
+            panels.classList.toggle('show-register');
+        }
+    </script>
 </body>
-    <script src="js/main.js"></script>
 </html>
+
+
