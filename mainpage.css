@@ -1,7 +1,8 @@
 .ramka {
     position: relative;
     overflow: hidden;
-    height: 400px; /* Możesz dostosować wysokość sekcji hero */
+    height: 400px;
+    /* Możesz dostosować wysokość sekcji hero */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,12 +53,15 @@
 
 .poprzedni:hover,
 .nastepny:hover {
-    background-color: rgba(150, 150, 150, 0.7); /* Zmiana koloru tła po najechaniu myszką */
+    background-color: rgba(150, 150, 150, 0.7);
+    /* Zmiana koloru tła po najechaniu myszką */
 }
 
 .bestseller {
-    width: 100%; /* Rozciągnięcie bestsellerów na całą szerokość ekranu */
-    height: 60px; /* Możesz dostosować wysokość sekcji bestsellerów */
+    width: 100%;
+    /* Rozciągnięcie bestsellerów na całą szerokość ekranu */
+    height: 60px;
+    /* Możesz dostosować wysokość sekcji bestsellerów */
     background-size: cover;
     background-position: center;
     background-color: rgba(177, 175, 175, 0.308);
@@ -80,8 +84,10 @@
 }
 
 .products-wrapper {
-    display: flex; /* Ustaw kontener produktów na flexbox */
-    overflow-x: auto; /* Dodaj przewijanie poziome */
+    display: flex;
+    /* Ustaw kontener produktów na flexbox */
+    overflow-x: auto;
+    /* Dodaj przewijanie poziome */
 }
 
 .product {
@@ -93,19 +99,22 @@
     height: 200px;
     margin-right: 40px;
     margin-left: 40px;
-    margin-bottom: 40px; /* Dodaj margines na dół, aby uniknąć nakładania się na siebie */
+    margin-bottom: 40px;
+    /* Dodaj margines na dół, aby uniknąć nakładania się na siebie */
     flex-shrink: 0;
-    
+
 }
 
 .product a {
-    display: block; /* Spraw, że cały obszar produktu będzie klikalny */
+    display: block;
+    /* Spraw, że cały obszar produktu będzie klikalny */
     text-decoration: none;
 }
 
 .product img {
     width: 100%;
-    border-radius: 15px 15px 0 0; /* Zaokrąglij tylko górne rogi zdjęcia */
+    border-radius: 15px 15px 0 0;
+    /* Zaokrąglij tylko górne rogi zdjęcia */
 }
 
 .product-info {
@@ -114,7 +123,8 @@
 
 .product p.price {
     text-align: center;
-    margin: 0; /* Resetuj margines */
+    margin: 0;
+    /* Resetuj margines */
     padding: 10px;
     background-color: rgba(210, 210, 210);
     border-radius: 10px;
@@ -122,17 +132,20 @@
 
 .product p.description {
     text-align: center;
-    margin: 0; /* Resetuj margines */
+    margin: 0;
+    /* Resetuj margines */
     padding: 10px;
 }
 
 .product p.price,
 .product p.description {
-    color: black; /* lub inny kolor, który chcesz zastosować */
+    color: black;
+    /* lub inny kolor, który chcesz zastosować */
 }
 
 .product:last-child {
-    margin-right: 0; /* Usuwa margines po ostatnim produkcie */
+    margin-right: 0;
+    /* Usuwa margines po ostatnim produkcie */
 }
 
 .prev,
@@ -159,6 +172,6 @@
 
 .prev:hover,
 .next:hover {
-    background-color: rgba(150, 150, 150, 0.7); /* Zmiana koloru tła po najechaniu myszką */
+    background-color: rgba(150, 150, 150, 0.7);
+    /* Zmiana koloru tła po najechaniu myszką */
 }
-
