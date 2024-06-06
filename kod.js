@@ -27,3 +27,13 @@ document.getElementById('registrationForm').addEventListener('submit', function 
             console.error('Error:', error);
         });
 });
+
+document.getElementById('showRegister').addEventListener('click', function () {
+    document.getElementById('loginForm').style.transform = 'translateX(-100%)';
+    document.getElementById('registerPanel').style.transform = 'translateX(0)';
+});
+
+document.getElementById('showLogin').addEventListener('click', function () {
+    document.getElementById('registerPanel').style.transform = 'translateX(100%)';
+    document.getElementById('loginForm').style.transform = 'translateX(0)';
+});
