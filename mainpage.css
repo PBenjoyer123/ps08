@@ -1,8 +1,98 @@
+.topowe1 {
+    position: relative;
+    width: 1811px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.text1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%; /* Szerokość napisów wynosi 25% szerokości kontenera */
+    background-color: rgba(255, 255, 255, 0.7); /* Dodajemy tło dla napisów */
+    padding: 10px; /* Dodajemy wypełnienie wokół napisów */
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.zdjecie1 {
+    position: relative;
+}
+
+.captions1 {
+    position: absolute; /* Ustawiamy pozycję absolutną dla napisów */
+    top: 0; /* Umieszczamy napisy na dole kontenera */
+    left: 100; /* Umieszczamy napisy na lewo kontenera */
+    width: 25%; /* Szerokość napisów wynosi 100% szerokości kontenera */
+    background-color: rgba(255, 255, 255, 0.7); /* Dodajemy tło dla napisów */
+    padding: 10px; /* Dodajemy wypełnienie wokół napisów */
+    box-sizing: border-box; /* Ustawiamy model pudełkowy na border-box, aby padding nie zwiększał szerokości napisów */
+}
+
+.topowe {
+    position: relative;
+    width: 1811px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%; /* Szerokość napisów wynosi 25% szerokości kontenera */
+    background-color: rgba(255, 255, 255, 0.7); /* Dodajemy tło dla napisów */
+    padding: 10px; /* Dodajemy wypełnienie wokół napisów */
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.zdjecie {
+    position: relative;
+}
+
+.captions {
+    position: absolute; /* Ustawiamy pozycję absolutną dla napisów */
+    top: 0; /* Umieszczamy napisy na dole kontenera */
+    right: 100; /* Umieszczamy napisy na lewo kontenera */
+    width: 25%; /* Szerokość napisów wynosi 100% szerokości kontenera */
+    background-color: rgba(255, 255, 255, 0.7); /* Dodajemy tło dla napisów */
+    padding: 10px; /* Dodajemy wypełnienie wokół napisów */
+    box-sizing: border-box; /* Ustawiamy model pudełkowy na border-box, aby padding nie zwiększał szerokości napisów */
+}
+
+.zdjecie img {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+    transition: transform 0.3s ease; 
+    width: 750px;
+    height: 650px;
+    z-index: 1;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.zdjecie:hover img {
+    transform: translateX(+50%); /* Przesunięcie zdjęcia w lewo o 25% szerokości kontenera po najechaniu myszką */
+  }
+
 .ramka {
     position: relative;
     overflow: hidden;
-    height: 400px;
-    /* Możesz dostosować wysokość sekcji hero */
+    height: 400px; /* Możesz dostosować wysokość sekcji hero */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,20 +103,22 @@
 }
 
 .ramka-content {
-    max-width: 600px;
-    border-radius: 10px;
+    max-width: 800px;
+    border-radius: 30px;
     color: black;
     padding: 0px;
-    border: 4px solid black;
+    
     position: absolute;
-    width: 600px;
-    height: 258px;
+    width: 800px;
+    height: 300px;
 }
 
 .ramka-produkt {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
 }
 
 .poprzedni,
@@ -41,6 +133,7 @@
     transform: translateY(-50%);
     z-index: 1;
     border-radius: 20%;
+    display: none;
 }
 
 .poprzedni {
@@ -51,17 +144,19 @@
     right: 10px;
 }
 
+.ramka-content:hover .poprzedni,
+.ramka-content:hover .nastepny {
+    display: block;
+}
+
 .poprzedni:hover,
 .nastepny:hover {
-    background-color: rgba(150, 150, 150, 0.7);
-    /* Zmiana koloru tła po najechaniu myszką */
+    background-color: rgba(150, 150, 150, 0.7); /* Zmiana koloru tła po najechaniu myszką */
 }
 
 .bestseller {
-    width: 100%;
-    /* Rozciągnięcie bestsellerów na całą szerokość ekranu */
-    height: 60px;
-    /* Możesz dostosować wysokość sekcji bestsellerów */
+    width: 100%; /* Rozciągnięcie bestsellerów na całą szerokość ekranu */
+    height: 60px; /* Możesz dostosować wysokość sekcji bestsellerów */
     background-size: cover;
     background-position: center;
     background-color: rgba(177, 175, 175, 0.308);
@@ -69,7 +164,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
     margin-bottom: 20px;
 }
 
@@ -84,10 +178,8 @@
 }
 
 .products-wrapper {
-    display: flex;
-    /* Ustaw kontener produktów na flexbox */
-    overflow-x: auto;
-    /* Dodaj przewijanie poziome */
+    display: flex; /* Ustaw kontener produktów na flexbox */
+    overflow-x: hidden; /* Dodaj przewijanie poziome */
 }
 
 .product {
@@ -95,26 +187,23 @@
     border: 1px solid black;
     border-radius: 15px;
     background-color: white;
-    width: 370px;
-    height: 200px;
-    margin-right: 40px;
-    margin-left: 40px;
-    margin-bottom: 40px;
-    /* Dodaj margines na dół, aby uniknąć nakładania się na siebie */
+    width: 200px;
+    height: 300px;
+    margin-right: 120px;
+    margin-left: 120px;
+    margin-bottom: 40px; /* Dodaj margines na dół, aby uniknąć nakładania się na siebie */
     flex-shrink: 0;
-
+    
 }
 
 .product a {
-    display: block;
-    /* Spraw, że cały obszar produktu będzie klikalny */
+    display: block; /* Spraw, że cały obszar produktu będzie klikalny */
     text-decoration: none;
 }
 
 .product img {
     width: 100%;
-    border-radius: 15px 15px 0 0;
-    /* Zaokrąglij tylko górne rogi zdjęcia */
+    border-radius: 15px 15px 0 0; /* Zaokrąglij tylko górne rogi zdjęcia */
 }
 
 .product-info {
@@ -123,8 +212,7 @@
 
 .product p.price {
     text-align: center;
-    margin: 0;
-    /* Resetuj margines */
+    margin: 0; /* Resetuj margines */
     padding: 10px;
     background-color: rgba(210, 210, 210);
     border-radius: 10px;
@@ -132,20 +220,17 @@
 
 .product p.description {
     text-align: center;
-    margin: 0;
-    /* Resetuj margines */
+    margin: 0; /* Resetuj margines */
     padding: 10px;
 }
 
 .product p.price,
 .product p.description {
-    color: black;
-    /* lub inny kolor, który chcesz zastosować */
+    color: black; /* lub inny kolor, który chcesz zastosować */
 }
 
 .product:last-child {
-    margin-right: 0;
-    /* Usuwa margines po ostatnim produkcie */
+    margin-right: 0; /* Usuwa margines po ostatnim produkcie */
 }
 
 .prev,
@@ -172,6 +257,27 @@
 
 .prev:hover,
 .next:hover {
-    background-color: rgba(150, 150, 150, 0.7);
-    /* Zmiana koloru tła po najechaniu myszką */
+    background-color: rgba(150, 150, 150, 0.7); /* Zmiana koloru tła po najechaniu myszką */
+}
+
+.search-container {
+    border-radius: 20px; /* zaokrąglenie rogów */
+    padding: 20px; /* wewnętrzny odstęp */
+}
+
+/* Dodatkowy padding dla pola wyszukiwania */
+.search-container input[type="text"] {
+    padding: 10px; /* przykładowy padding */
+    border-radius: 20px 0px 0px 20px;
+}
+
+/* Stylizacja przycisku wyszukiwania */
+.search-container button {
+    border-radius: 0 20px 20px 0; /* zaokrąglenie rogów */
+    padding: 10px 20px; /* padding */
+}
+
+.results {
+    text-align: left; /* Ustawienie zawartości wyników do lewej */
+    margin-top: 20px;
 }

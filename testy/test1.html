@@ -1,61 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logowanie i Rejestracja</title>
+    <title>Strona z Wyszukiwarką</title>
     <link rel="stylesheet" href="testy11.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .search-container {
+            margin: 20px;
+        }
+        .results {
+            margin-top: 20px;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="wrapper">
-        <div class="login-panel" id="loginPanel">
-            <header>Zaloguj się</header>
-            <form id="loginForm">
-                <div class="field">
-                    <div class="input-area">
-                        <input type="email" name="login-username" id="login-username" placeholder="E-mail" required>
-                        <i class="icon fas fa-envelope"></i>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="input-area">
-                        <input type="password" name="login-password" id="login-password" placeholder="Hasło" required>
-                        <i class="icon fas fa-lock"></i>
-                    </div>
-                </div>
-                <input type="submit" class="btn" value="Zaloguj się">
-                <button type="button" id="showRegister" class="btn">Nie masz konta? Załóż je!</button>
-            </form>
-        </div>
-        <div class="register-panel" id="registerPanel">
-            <header>Zarejestruj się</header>
-            <form id="registrationForm">
-                <div class="field">
-                    <div class="input-area">
-                        <input type="email" id="register-email" placeholder="E-mail" required>
-                        <i class="icon fas fa-envelope"></i>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="input-area">
-                        <input type="password" id="register-password" placeholder="Hasło" required>
-                        <i class="icon fas fa-lock"></i>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="input-area">
-                        <input type="password" id="register-confirm-password" placeholder="Potwierdź Hasło" required>
-                        <i class="icon fas fa-lock"></i>
-                    </div>
-                </div>
-                <input type="submit" class="btn" value="Zarejestruj się">
-                <button type="button" id="showLogin" class="btn">Masz konto? Zaloguj się</button>
-            </form>
-        </div>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Wyszukaj...">
+        <button onclick="search()">Szukaj</button>
     </div>
-    <script src="testy111.js"></script>
-</body>
+    <div class="results" id="results"></div>
 
+    <script src="search.js"></script>
+</body>
 </html>

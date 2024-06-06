@@ -1,0 +1,25 @@
+{
+    "item": [
+        {
+            "id": "1",
+            "type": "smartphone",
+            "brand": "Apple",
+            "price": "3200",
+            "image": "zdjecia/telefon.webp"
+        },
+        {
+            "id": "2",
+            "type": "smartphone",
+            "brand": "Samsung",
+            "price": "3900",
+            "image": "zdjecia/samsung.jpg"
+        },
+        {
+            "id": "3",
+            "type": "laptop",
+            "brand": "Apple",
+            "price": "5000",
+            "image": "zdjecia/laptop.webp"
+        }
+    ]
+}

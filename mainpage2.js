@@ -19,26 +19,3 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-    const prevButton = document.querySelector(".poprzedni");
-    const nextButton = document.querySelector(".nastepny");
-    const container = document.querySelector(".ramka-content");
-
-    const scrollStep = 300; // Ustaw krok przewijania
-
-    prevButton.addEventListener("click", function() {
-        container.scrollBy({
-            left: -scrollStep,
-            behavior: "smooth"
-        });
-    });
-
-    nextButton.addEventListener("click", function() {
-        container.scrollBy({
-            left: scrollStep,
-            behavior: "smooth"
-        });
-    });
-});
-
