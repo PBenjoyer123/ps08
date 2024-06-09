@@ -6,6 +6,11 @@
     <title>Sklep internetowy</title>
     <link rel="stylesheet" href="background.css">
     <link rel="stylesheet" href="mainpage.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -30,25 +35,30 @@
     <section class="ramka">
         <div class="ramka-content">
             <button class="poprzedni">&#10094;</button>
-            <div class="ramka-produkt" data-src="zdjecia/promo.jpg"></div>   
+            <div class="ramka-produkt">
+                <img src="zdjecia/promo.jpg" alt="Promo Image">
+            </div>   
             <button class="nastepny">&#10095;</button>
         </div>
     </section>
 
     <div class="background-image"></div> <!-- Dodaj tło dla całej strony -->
 
-    <div class="bestseller">
-        <x><center>Bestsellery</center></x>
-    </div>
-    <section class="produkty">
+    <section class="produkty" id="productSection" style="display: none;">
         <button class="prev">&#10094;</button> <!-- Dodaj przyciski do przewijania -->
         <div class="products-wrapper" id="results">
             <!-- Tutaj będą wyświetlane wyniki wyszukiwania -->
         </div>
-        <button class="next">&#10095;</button>
+        <button class="next">&#10095;"></button>
     </section>
 
-    <section class="topowe">
+    <section id="szczegolneProduktySection" style="display: none;">
+        <div id="specialResults">
+            <!-- Tutaj będą wyświetlane szczególne produkty -->
+        </div>
+    </section>
+
+    <section class="topowe home-products">
         <!-- Tutaj będą wyświetlane wyniki wyszukiwania -->
         <div class="zdjecie">
             <img src="zdjecia/samsung.jpg" alt="zdjecie"> <!-- Uzupełnij ścieżkę do pliku obrazu -->
@@ -56,20 +66,19 @@
 
         <div class="captions">
             <p><center>SPECYFIKACJA</center></p>
-            <p>Nagłówek 2</p>
-            <p>Nagłówek 2</p>
-            <p>Nagłówek 2</p>
-            <p>Nagłówek 2</p>
-            <p>Nagłówek 2</p>
+            <p>Marka:</p>
+            <p>Cena:</p>
+            <p>Procesor:</p>
+            <p>RAM:</p>
             <!-- Dodaj więcej napisów według potrzeb -->
         </div>
 
         <div class="text">
-            <p>adasdadsdasdasdasdasdasdas</p>
+            <p></p>
         </div>
     </section>
 
-    <section class="topowe1">
+    <section class="topowe1 home-products">
         <!-- Tutaj będą wyświetlane wyniki wyszukiwania -->
         <div class="zdjecie">
             <img src="zdjecia/telefon.webp" alt="zdjecie1"> <!-- Uzupełnij ścieżkę do pliku obrazu -->
@@ -77,20 +86,19 @@
 
         <div class="captions">
             <p><center>SPECYFIKACJA</center></p>
-            <p>Nagłówek 2</p>
-            <p>Nagłówek 2</p>
-            <p>Nagłówek 2</p>
-            <p>Nagłówek 2</p>
-            <p>Nagłówek 2</p>
+            <p>Marka:</p>
+            <p>Cena:</p>
+            <p>Procesor:</p>
+            <p>RAM:</p>
             <!-- Dodaj więcej napisów według potrzeb -->
         </div>
 
         <div class="text1">
-            <p>adasdadsdasdasdasdasdasdas</p>
+            <p></p>
         </div>
     </section>
 
-    <section class="topowe">
+    <section class="topowe home-products">
         <!-- Tutaj będą wyświetlane wyniki wyszukiwania -->
         <div class="zdjecie">
             <img src="zdjecia/laptop.webp" alt="zdjecie"> <!-- Uzupełnij ścieżkę do pliku obrazu -->
@@ -98,16 +106,15 @@
 
         <div class="captions">
             <p><center>SPECYFIKACJA</center></p>
-            <p>Nagłówek 2</p>
-            <p>Nagłówek 2</p>
-            <p>Nagłówek 2</p>
-            <p>Nagłówek 2</p>
-            <p>Nagłówek 2</p>
+            <p>Marka:</p>
+            <p>Cena:</p>
+            <p>Procesor:</p>
+            <p>RAM:</p>
             <!-- Dodaj więcej napisów według potrzeb -->
         </div>
 
         <div class="text">
-            <p>adasdadsdasdasdasdasdasdas</p>
+            <p></p>
         </div>
     </section>
 
@@ -144,8 +151,6 @@
         </div>
     </footer>
         
-    
-
     <script src="szukanie.js"></script> <!-- Dodaj plik JavaScript -->
 </body>
 </html>

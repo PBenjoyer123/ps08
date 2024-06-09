@@ -1,6 +1,7 @@
+.topowe,
 .topowe1 {
     position: relative;
-    width: 1811px;
+    width: calc(50% - 10px); /* Szerokość 50% z odstępem 10px */
     background-color: white;
     padding: 20px;
     display: flex;
@@ -21,9 +22,6 @@
     margin-top: 50px;
 }
 
-.zdjecie1 {
-    position: relative;
-}
 
 .captions1 {
     position: absolute; /* Ustawiamy pozycję absolutną dla napisów */
@@ -35,17 +33,6 @@
     box-sizing: border-box; /* Ustawiamy model pudełkowy na border-box, aby padding nie zwiększał szerokości napisów */
 }
 
-.topowe {
-    position: relative;
-    width: 1811px;
-    background-color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    overflow: hidden;
-}
 
 .text {
     position: absolute;
@@ -58,7 +45,7 @@
     margin-top: 50px;
 }
 
-.zdjecie {
+.zdjecie1 {
     position: relative;
 }
 
@@ -78,15 +65,15 @@
     position: relative;
     left: 0;
     transition: transform 0.3s ease; 
-    width: 750px;
-    height: 650px;
+    width: 450px;
+    height: 350px;
     z-index: 1;
     border-radius: 20px;
     border: 1px solid black;
 }
 
 .zdjecie:hover img {
-    transform: translateX(+50%); /* Przesunięcie zdjęcia w lewo o 25% szerokości kontenera po najechaniu myszką */
+    transform: translateX(+70%); /* Przesunięcie zdjęcia w lewo o 25% szerokości kontenera po najechaniu myszką */
   }
 
 .ramka {
@@ -107,7 +94,6 @@
     border-radius: 30px;
     color: black;
     padding: 0px;
-    
     position: absolute;
     width: 800px;
     height: 300px;

@@ -1,14 +1,51 @@
-/* Dodaj poniższe style do sekcji <style> w pliku HTML */
-.result-item {
-    border: 1px solid #ccc;
+.produkty {
+    display: flex;
+    flex-wrap: wrap; /* Umożliwia zawijanie produktów do nowej linii, jeśli nie mieszczą się w jednej linii */
+    gap: 20px; /* Odstęp między produktami */
+    justify-content: space-between; /* Rozkłada produkty równomiernie */
+    padding: 20px;
+}
+
+.product {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: white;
+    width: calc(50% - 20px); /* Ustaw szerokość na 50% - 20px dla odstępu */
+    height: 300px;
+    flex-shrink: 0;
+    box-sizing: border-box; /* Uwzględnia padding i border w szerokości */
+}
+
+.product a {
+    display: block; /* Sprawia, że cały obszar produktu jest klikalny */
+    text-decoration: none;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 15px 15px 0 0; /* Zaokrągla tylko górne rogi zdjęcia */
+}
+
+.product-info {
     padding: 10px;
-    margin-bottom: 10px;
 }
-.result-item h3 {
-    margin: 0;
-    font-size: 1.2em;
+
+.product p.price {
+    text-align: center;
+    margin: 0; /* Resetuje margines */
+    padding: 10px;
+    background-color: rgba(210, 210, 210);
+    border-radius: 10px;
 }
-.result-item p {
-    margin: 5px 0 0;
-    font-size: 1em;
+
+.product p.description {
+    text-align: center;
+    margin: 0; /* Resetuje margines */
+    padding: 10px;
+}
+
+.product p.price,
+.product p.description {
+    color: black; /* Lub inny kolor, który chcesz zastosować */
 }
