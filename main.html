@@ -6,11 +6,7 @@
     <title>Sklep internetowy</title>
     <link rel="stylesheet" href="background.css">
     <link rel="stylesheet" href="mainpage.css">
-    <style>
-        .hidden {
-            display: none;
-        }
-    </style>
+  
 </head>
 <body>
     <header>
@@ -18,13 +14,25 @@
             <div class="logo">
                 <img src="zdjecia/logo.png" alt="Zalando Logo"> <!-- Uzupełnij ścieżkę do pliku obrazu -->
             </div>
-            <h1>Bądź zmianą, którą chcesz zobaczyć na świecie</h1>
+            <h1>SKLEP AGD</h1>
             <nav>
                 <ul>
                     <li>
+                            <div class="menu-icon">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                            <ul class="nav-links">
+                                <li><a href="#">Strona główna</a></li>
+                                <li><a href="#">O nas</a></li>
+                                <li><a href="#">Usługi</a></li>
+                                <li><a href="#">Kontakt</a></li>
+                            
                         <div class="search-container">
                             <input type="text" id="searchInput" placeholder="Wyszukaj...">
                             <button onclick="search()">Szukaj</button>
+                        </ul>
                         </div>
                     </li>
                 </ul>
@@ -42,8 +50,6 @@
         </div>
     </section>
 
-    <div class="background-image"></div> <!-- Dodaj tło dla całej strony -->
-
     <section class="produkty" id="productSection" style="display: none;">
         <button class="prev">&#10094;</button> <!-- Dodaj przyciski do przewijania -->
         <div class="products-wrapper" id="results">
@@ -57,8 +63,7 @@
             <!-- Tutaj będą wyświetlane szczególne produkty -->
         </div>
     </section>
-
-    <section class="topowe home-products">
+    <section class="topowe">
         <!-- Tutaj będą wyświetlane wyniki wyszukiwania -->
         <div class="zdjecie">
             <img src="zdjecia/samsung.jpg" alt="zdjecie"> <!-- Uzupełnij ścieżkę do pliku obrazu -->
@@ -78,7 +83,7 @@
         </div>
     </section>
 
-    <section class="topowe1 home-products">
+    <section class="topowe">
         <!-- Tutaj będą wyświetlane wyniki wyszukiwania -->
         <div class="zdjecie">
             <img src="zdjecia/telefon.webp" alt="zdjecie1"> <!-- Uzupełnij ścieżkę do pliku obrazu -->
@@ -98,10 +103,30 @@
         </div>
     </section>
 
-    <section class="topowe home-products">
+    <section class="topowe">
         <!-- Tutaj będą wyświetlane wyniki wyszukiwania -->
         <div class="zdjecie">
             <img src="zdjecia/laptop.webp" alt="zdjecie"> <!-- Uzupełnij ścieżkę do pliku obrazu -->
+        </div>
+
+        <div class="captions">
+            <p><center>SPECYFIKACJA</center></p>
+            <p>Marka:</p>
+            <p>Cena:</p>
+            <p>Procesor:</p>
+            <p>RAM:</p>
+            <!-- Dodaj więcej napisów według potrzeb -->
+        </div>
+
+        <div class="text">
+            <p></p>
+        </div>
+    </section>
+
+    <section class="topowe">
+        <!-- Tutaj będą wyświetlane wyniki wyszukiwania -->
+        <div class="zdjecie">
+            <img src="zdjecia/słuchawki.jpg" alt="zdjecie"> <!-- Uzupełnij ścieżkę do pliku obrazu -->
         </div>
 
         <div class="captions">
@@ -152,5 +177,6 @@
     </footer>
         
     <script src="szukanie.js"></script> <!-- Dodaj plik JavaScript -->
+    <script src="respo.js"></script> <!-- Dodaj plik JavaScript -->
 </body>
 </html>

@@ -23,7 +23,8 @@
 }
 
 
-.captions1 {
+.captions1,
+.captions {
     position: absolute; /* Ustawiamy pozycję absolutną dla napisów */
     top: 0; /* Umieszczamy napisy na dole kontenera */
     left: 100; /* Umieszczamy napisy na lewo kontenera */
@@ -49,15 +50,6 @@
     position: relative;
 }
 
-.captions {
-    position: absolute; /* Ustawiamy pozycję absolutną dla napisów */
-    top: 0; /* Umieszczamy napisy na dole kontenera */
-    right: 100; /* Umieszczamy napisy na lewo kontenera */
-    width: 25%; /* Szerokość napisów wynosi 100% szerokości kontenera */
-    background-color: rgba(255, 255, 255, 0.7); /* Dodajemy tło dla napisów */
-    padding: 10px; /* Dodajemy wypełnienie wokół napisów */
-    box-sizing: border-box; /* Ustawiamy model pudełkowy na border-box, aby padding nie zwiększał szerokości napisów */
-}
 
 .zdjecie img {
     display: block;
@@ -88,7 +80,18 @@
     margin-top: 30px;
     margin-bottom: 150px;
 }
-
+.nav-links {
+    position: relative;
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 .ramka-content {
     max-width: 800px;
     border-radius: 30px;
@@ -248,7 +251,7 @@
 
 .search-container {
     border-radius: 20px; /* zaokrąglenie rogów */
-    padding: 20px; /* wewnętrzny odstęp */
+    padding: 10px; /* wewnętrzny odstęp */
 }
 
 /* Dodatkowy padding dla pola wyszukiwania */
@@ -260,10 +263,89 @@
 /* Stylizacja przycisku wyszukiwania */
 .search-container button {
     border-radius: 0 20px 20px 0; /* zaokrąglenie rogów */
-    padding: 10px 20px; /* padding */
+    padding: 10px 10px; /* padding */
 }
 
 .results {
     text-align: left; /* Ustawienie zawartości wyników do lewej */
     margin-top: 20px;
+}
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffc107;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px;
+    transition: all 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .menu-icon.active .line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-icon.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active .line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
 }
