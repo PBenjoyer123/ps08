@@ -1,28 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
-
+ng="en">
+    
 <head>
     <meta charset="UTF-8">
-    <title>Main Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep internetowy</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-
 <body>
-    <h1>Available Items</h1>
-    <div class="item">
-        <h2>Item 1</h2>
-        <button class="cart-button" onclick="addToCart('Item 1')">Add to Cart</button>
-    </div>
-    <div class="item">
-        <h2>Item 2</h2>
-        <button class="cart-button" onclick="addToCart('Item 2')">Add to Cart</button>
-    </div>
-    <div class="item">
-        <h2>Item 3</h2>
-        <button class="cart-button" onclick="addToCart('Item 3')">Add to Cart</button>
-    </div>
+    <header>
+        <div class="naglowek">
+            <a href="main.html" class="logo">Logo</a>
+            <div class="wyszukaj">
+                <form id="search-form" action="/action_page.php">
+                    <input type="text" id="search-input" placeholder="Wyszukaj...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="naglowekprawo">
+                <nav class="podstrony">
+                    <ul>    
 
-    <script src="script.js"></script>
+                    <button class="fas fa-headset kontakt-btn" onclick="window.location.href='kontakt.html'"> Kontakt </button>
+
+                    <div class="dropdown" id="konto-dropdown">
+                        <button class="fas fa-user" id="konto-btn"> Konto </button>
+                        <div class="content" id="konto-dropdown-opcje">
+                            <a href="konto.html"> Zaloguj się</a>
+                            <a href="konto_rejestracja.html"> Zarejestruj się </a>
+                        </div>
+                    </div>
+
+                    <div class = "icon-cart">
+                        <button class="fas fa-shopping-cart koszyk-btn">Koszyk</button>
+                        <span>0</span>
+                    </div>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="filter-bar">
+        <button class="filter-btn" data-type="Pistolet">Pistolet</button>
+        <button class="filter-btn" data-type="Karabin">Karabin</button>
+        <button class="filter-btn" data-type="Nóż">Nóż</button>
+        <button class="filter-btn" data-type="SMG">SMG</button>
+        <button class="filter-btn" data-type="Rękawice">Rękawice</button>
+    </div>
+    <main>
+        <div class="karuzela">
+
+            <div class="slajd fade">
+                <img src="img1.png">
+            </div>
+
+            <div class="slajd fade">
+                <img src="img2.png">
+            </div>
+            
+            <div class="slajd fade">
+                <img src="img3.png">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+            <a class="next" onclick="plusSlides(1)">&#10095</a>
+        </div>
+
+        <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <div class="items" id="items">
+          
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Zamówienia</h3>
+                <ul>
+                    <li><a href="#">Dostawa</a></li>
+                    <li><a href="#">Zwroty i reklamacje</a></li>
+                    <li><a href="#">Najczęściej zadawane pytania</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Promocje i inspiracje</h3>
+                <ul>
+                    <li><a href="#">Wyprzedaż</a></li>
+                    <li><a href="#">Promocje</a></li>
+                    <li><a href="#">Karty podarunkowe</a></li>
+                    <li><a href="#">Aktualności</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Nasz sklep</h3>
+                <ul>
+                    <li><a href="#">O nas</a></li>
+                    <li><a href="#">Regulamin</a></li>
+                    <li><a href="#">Polityka prywatności</a></li>
+                    <li><a href="#">Polityka cookies</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Kontakt</h3>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> +48 111 111 111</li>
+                    <li><i class="fas fa-envelope"></i> sklep@sklep.com</li>
+                    <li><i class="fab fa-whatsapp"></i> WhatsApp</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="main.js"></script>
+
 </body>
-
-</html>

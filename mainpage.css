@@ -1,13 +1,11 @@
-.topowe,
-.topowe1 {
+.topowe {
     position: relative;
-    width: calc(50% - 10px);
-    /* Szerokość 50% z odstępem 10px */
+    width: 100%; /* Zmiana szerokości na 100% */
     background-color: white;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Zmiana kierunku flexbox na kolumnowy */
+    align-items: flex-start; /* Wyśrodkowanie elementów w osi Y */
     margin-bottom: 20px;
     overflow: hidden;
 }
@@ -30,19 +28,13 @@
 .captions1,
 .captions {
     position: absolute;
-    /* Ustawiamy pozycję absolutną dla napisów */
-    top: 0;
-    /* Umieszczamy napisy na dole kontenera */
-    left: 100;
-    /* Umieszczamy napisy na lewo kontenera */
-    width: 25%;
-    /* Szerokość napisów wynosi 100% szerokości kontenera */
+    top: 0; /* zmieniona pozycja na górę */
+    left: 0;
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.7);
-    /* Dodajemy tło dla napisów */
     padding: 10px;
-    /* Dodajemy wypełnienie wokół napisów */
     box-sizing: border-box;
-    /* Ustawiamy model pudełkowy na border-box, aby padding nie zwiększał szerokości napisów */
+    margin-top: -20px; /* zmieniony margines górny */
 }
 
 
@@ -206,7 +198,6 @@
     margin-bottom: 40px;
     /* Dodaj margines na dół, aby uniknąć nakładania się na siebie */
     flex-shrink: 0;
-
 }
 
 .product a {
@@ -216,9 +207,9 @@
 }
 
 .product img {
-    width: 100%;
+    width: 450px; /* Ustaw szerokość zdjęcia */
+    height: 300px; /* Ustaw wysokość zdjęcia */
     border-radius: 15px 15px 0 0;
-    /* Zaokrąglij tylko górne rogi zdjęcia */
 }
 
 .product-info {

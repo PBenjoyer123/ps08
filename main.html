@@ -7,14 +7,13 @@
     <title>Sklep internetowy</title>
     <link rel="stylesheet" href="background.css">
     <link rel="stylesheet" href="mainpage.css">
-
 </head>
 
 <body>
     <header>
         <div class="pasek">
             <div class="logo">
-                <img src="zdjecia/logo.png" alt="Zalando Logo"> <!-- Uzupełnij ścieżkę do pliku obrazu -->
+                <img src="zdjecia/logo.png" alt="Zalando Logo">
             </div>
             <h1>SKLEP AGD</h1>
             <nav>
@@ -30,15 +29,14 @@
                             <li><a href="#">Tagi</a></li>
                             <li><a href="koszyk.html">Koszyk</a></li>
                             <li><a href="Konto.html">Zaloguj</a></li>
-
                             <div class="search-container">
                                 <input type="text" id="searchInput" placeholder="Wyszukaj...">
                                 <button onclick="search()">Szukaj</button>
+                            </div>
                         </ul>
-        </div>
-        </li>
-        </ul>
-        </nav>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -48,12 +46,12 @@
             <div class="ramka-produkt">
                 <img src="zdjecia/promo.jpg" alt="Promo Image">
             </div>
-            <button class="nastepny">&#10095;</button>
+            <button class="nastepny">&#10095;"></button>
         </div>
     </section>
 
     <section class="produkty" id="productSection" style="display: none;">
-        <button class="prev">&#10094;</button> <!-- Dodaj przyciski do przewijania -->
+        <button class="prev">&#10094;</button>
         <div class="products-wrapper" id="results">
             <!-- Tutaj będą wyświetlane wyniki wyszukiwania -->
         </div>
@@ -65,122 +63,34 @@
             <!-- Tutaj będą wyświetlane szczególne produkty -->
         </div>
     </section>
-    <section class="topowe">
-        <!-- Tutaj będą wyświetlane wyniki wyszukiwania -->
-        <div class="zdjecie">
-            <img src="zdjecia/samsung.jpg" alt="zdjecie">
-            <button class="cart-button" onclick="addToCart('Item 1')">Add to Cart</button>
-            <!-- Uzupełnij ścieżkę do pliku obrazu -->
-        </div>
 
-        <div class="captions">
-            <p>
-                <center>SPECYFIKACJA</center>
-            </p>
-            <p>Marka:</p>
-            <p>Cena:</p>
-            <p>Procesor:</p>
-            <p>RAM:</p>
-            <!-- Dodaj więcej napisów według potrzeb -->
-        </div>
-
-        <div class="text">
-            <p></p>
-        </div>
-    </section>
-
-    <section class="topowe">
-        <!-- Tutaj będą wyświetlane wyniki wyszukiwania -->
-        <div class="zdjecie">
-            <img src="zdjecia/telefon.webp" alt="zdjecie1"> <!-- Uzupełnij ścieżkę do pliku obrazu -->
-        </div>
-
-        <div class="captions">
-            <p>
-                <center>SPECYFIKACJA</center>
-            </p>
-            <p>Marka:</p>
-            <p>Cena:</p>
-            <p>Procesor:</p>
-            <p>RAM:</p>
-            <!-- Dodaj więcej napisów według potrzeb -->
-        </div>
-
-        <div class="text1">
-            <p></p>
-        </div>
-    </section>
-
-    <section class="topowe">
-        <!-- Tutaj będą wyświetlane wyniki wyszukiwania -->
-        <div class="zdjecie">
-            <img src="zdjecia/laptop.webp" alt="zdjecie"> <!-- Uzupełnij ścieżkę do pliku obrazu -->
-        </div>
-
-        <div class="captions">
-            <p>
-                <center>SPECYFIKACJA</center>
-            </p>
-            <p>Marka:</p>
-            <p>Cena:</p>
-            <p>Procesor:</p>
-            <p>RAM:</p>
-            <!-- Dodaj więcej napisów według potrzeb -->
-        </div>
-
-        <div class="text">
-            <p></p>
-        </div>
-    </section>
-
-    <section class="topowe">
-        <!-- Tutaj będą wyświetlane wyniki wyszukiwania -->
-        <div class="zdjecie">
-            <img src="zdjecia/słuchawki.jpg" alt="zdjecie"> <!-- Uzupełnij ścieżkę do pliku obrazu -->
-        </div>
-
-        <div class="captions">
-            <p>
-                <center>SPECYFIKACJA</center>
-            </p>
-            <p>Marka:</p>
-            <p>Cena:</p>
-            <p>Procesor:</p>
-            <p>RAM:</p>
-            <!-- Dodaj więcej napisów według potrzeb -->
-        </div>
-
-        <div class="text">
-            <p></p>
-        </div>
+    <section class="topowe" id="topowe">
+        <!-- Produkty będą wstawiane tutaj przez JavaScript -->
     </section>
 
     <footer>
-        <!-- Tutaj umieść stopkę -->
         <div class="left-column">
             <h3>FAQ</h3>
             <h3>Shipping & Returns</h3>
             <h3>Store Policy</h3>
             <h3>Payments</h3>
         </div>
-
         <div class="center-column">
             <h3>JB</h3>
             <h4>Tel: 690 365 869</h4>
             <h4>Email: baki.jawor@gmail.com</h4>
             <div class="social-icons">
                 <div class="facebook-icon">
-                    <a href="#"><img src="facebook.png" alt="Facebook"></a> <!-- Uzupełnij ścieżkę do pliku obrazu -->
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
                 </div>
                 <div class="insta-icon">
-                    <a href="#"><img src="instagram.png" alt="Instagram"></a> <!-- Uzupełnij ścieżkę do pliku obrazu -->
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
                 </div>
                 <div class="yt-icon">
-                    <a href="#"><img src="yt.png" alt="YouTube"></a> <!-- Uzupełnij ścieżkę do pliku obrazu -->
+                    <a href="#"><img src="yt.png" alt="YouTube"></a>
                 </div>
             </div>
         </div>
-
         <div class="right-column">
             <h4>Zapisz się do naszego Newslettera</h4>
             <input type="email" placeholder="Your email">
@@ -188,9 +98,10 @@
         </div>
     </footer>
 
-    <script src="szukanie.js"></script> <!-- Dodaj plik JavaScript -->
-    <script src="respo.js"></script> <!-- Dodaj plik JavaScript -->
-    <script src="koszyk.js"></script> <!-- Dodaj plik JavaScript -->
+    <script src="szukanie.js"></script>
+    <script src="respo.js"></script>
+    <script src="koszyk.js"></script>
+    <script src="wyswieltanie.js"></script>
 </body>
 
 </html>

@@ -1,32 +1,32 @@
 {
-    "item": [
+    "items": [
         {
-            "id": "1",
-            "type": "smartphone",
-            "brand": "Apple",
-            "price": "3200",
-            "image": "zdjecia/telefon.webp"
-        },
-        {
-            "id": "2",
-            "type": "smartphone",
+            "image": "zdjecia/samsung.jpg",
             "brand": "Samsung",
-            "price": "3900",
-            "image": "zdjecia/samsung.jpg"
+            "price": 2000,
+            "processor": "Exynos",
+            "ram": "8GB"
         },
         {
-            "id": "3",
-            "type": "laptop",
+            "image": "zdjecia/telefon.webp",
             "brand": "Apple",
-            "price": "5000",
-            "image": "zdjecia/laptop.webp"
+            "price": 3000,
+            "processor": "A13 Bionic",
+            "ram": "6GB"
         },
         {
-            "id": "4",
-            "type": "słuchawki",
+            "image": "zdjecia/laptop.webp",
+            "brand": "Dell",
+            "price": 4000,
+            "processor": "Intel i7",
+            "ram": "16GB"
+        },
+        {
+            "image": "zdjecia/słuchawki.jpg",
             "brand": "Sony",
-            "price": "500",
-            "image": "zdjecia/słuchawki.jpg"
+            "price": 500,
+            "processor": "N/A",
+            "ram": "N/A"
         }
     ]
 }
