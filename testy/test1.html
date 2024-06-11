@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Menu</title>
-    <link rel="stylesheet" href="testy11.css">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">Logo</div>
-            <nav>
-                <div class="menu-icon">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#">Strona główna</a></li>
-                    <li><a href="#">O nas</a></li>
-                    <li><a href="#">Usługi</a></li>
-                    <li><a href="#">Kontakt</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="content">
-        <!-- Tutaj zawartość strony -->
+    <h1>Available Items</h1>
+    <div class="item">
+        <h2>Item 1</h2>
+        <button class="cart-button" onclick="addToCart('Item 1')">Add to Cart</button>
     </div>
-    <script src="testy111.js"></script>
+    <div class="item">
+        <h2>Item 2</h2>
+        <button class="cart-button" onclick="addToCart('Item 2')">Add to Cart</button>
+    </div>
+    <div class="item">
+        <h2>Item 3</h2>
+        <button class="cart-button" onclick="addToCart('Item 3')">Add to Cart</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

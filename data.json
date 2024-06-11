@@ -20,6 +20,13 @@
             "brand": "Apple",
             "price": "5000",
             "image": "zdjecia/laptop.webp"
+        },
+        {
+            "id": "4",
+            "type": "słuchawki",
+            "brand": "Sony",
+            "price": "500",
+            "image": "zdjecia/słuchawki.jpg"
         }
     ]
 }

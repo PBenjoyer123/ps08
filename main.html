@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sklep internetowy</title>
     <link rel="stylesheet" href="background.css">
     <link rel="stylesheet" href="mainpage.css">
-  
+
 </head>
+
 <body>
     <header>
         <div class="pasek">
@@ -18,25 +20,25 @@
             <nav>
                 <ul>
                     <li>
-                            <div class="menu-icon">
-                                <div class="line"></div>
-                                <div class="line"></div>
-                                <div class="line"></div>
-                            </div>
-                            <ul class="nav-links">
-                                <li><a href="#">Strona główna</a></li>
-                                <li><a href="#">O nas</a></li>
-                                <li><a href="#">Usługi</a></li>
-                                <li><a href="#">Kontakt</a></li>
-                            
-                        <div class="search-container">
-                            <input type="text" id="searchInput" placeholder="Wyszukaj...">
-                            <button onclick="search()">Szukaj</button>
-                        </ul>
+                        <div class="menu-icon">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
                         </div>
-                    </li>
-                </ul>
-            </nav>
+                        <ul class="nav-links">
+                            <li><a href="main.html">Strona główna</a></li>
+                            <li><a href="#">Tagi</a></li>
+                            <li><a href="koszyk.html">Koszyk</a></li>
+                            <li><a href="Konto.html">Zaloguj</a></li>
+
+                            <div class="search-container">
+                                <input type="text" id="searchInput" placeholder="Wyszukaj...">
+                                <button onclick="search()">Szukaj</button>
+                        </ul>
+        </div>
+        </li>
+        </ul>
+        </nav>
         </div>
     </header>
 
@@ -45,7 +47,7 @@
             <button class="poprzedni">&#10094;</button>
             <div class="ramka-produkt">
                 <img src="zdjecia/promo.jpg" alt="Promo Image">
-            </div>   
+            </div>
             <button class="nastepny">&#10095;</button>
         </div>
     </section>
@@ -66,11 +68,15 @@
     <section class="topowe">
         <!-- Tutaj będą wyświetlane wyniki wyszukiwania -->
         <div class="zdjecie">
-            <img src="zdjecia/samsung.jpg" alt="zdjecie"> <!-- Uzupełnij ścieżkę do pliku obrazu -->
+            <img src="zdjecia/samsung.jpg" alt="zdjecie">
+            <button class="cart-button" onclick="addToCart('Item 1')">Add to Cart</button>
+            <!-- Uzupełnij ścieżkę do pliku obrazu -->
         </div>
 
         <div class="captions">
-            <p><center>SPECYFIKACJA</center></p>
+            <p>
+                <center>SPECYFIKACJA</center>
+            </p>
             <p>Marka:</p>
             <p>Cena:</p>
             <p>Procesor:</p>
@@ -90,7 +96,9 @@
         </div>
 
         <div class="captions">
-            <p><center>SPECYFIKACJA</center></p>
+            <p>
+                <center>SPECYFIKACJA</center>
+            </p>
             <p>Marka:</p>
             <p>Cena:</p>
             <p>Procesor:</p>
@@ -110,7 +118,9 @@
         </div>
 
         <div class="captions">
-            <p><center>SPECYFIKACJA</center></p>
+            <p>
+                <center>SPECYFIKACJA</center>
+            </p>
             <p>Marka:</p>
             <p>Cena:</p>
             <p>Procesor:</p>
@@ -130,7 +140,9 @@
         </div>
 
         <div class="captions">
-            <p><center>SPECYFIKACJA</center></p>
+            <p>
+                <center>SPECYFIKACJA</center>
+            </p>
             <p>Marka:</p>
             <p>Cena:</p>
             <p>Procesor:</p>
@@ -151,7 +163,7 @@
             <h3>Store Policy</h3>
             <h3>Payments</h3>
         </div>
-        
+
         <div class="center-column">
             <h3>JB</h3>
             <h4>Tel: 690 365 869</h4>
@@ -175,8 +187,10 @@
             <button>SUBMIT</button>
         </div>
     </footer>
-        
+
     <script src="szukanie.js"></script> <!-- Dodaj plik JavaScript -->
     <script src="respo.js"></script> <!-- Dodaj plik JavaScript -->
+    <script src="koszyk.js"></script> <!-- Dodaj plik JavaScript -->
 </body>
+
 </html>
