@@ -1,95 +1,67 @@
-// Funkcja wyszukiwania
-function search() {
-    var input = document.getElementById('searchInput').value.toLowerCase(); // Pobierz wartość pola wyszukiwania i przekształć ją na małe litery
-    var resultsContainer = document.getElementById('results');
-    var specialResultsContainer = document.getElementById('specialResults');
-    resultsContainer.innerHTML = ''; // Wyczyść wyniki poprzedniego wyszukiwania
-    specialResultsContainer.innerHTML = ''; // Wyczyść poprzednie szczególne wyniki
+document.addEventListener('DOMContentLoaded', () => {
+    let allProducts = [];
 
-    // Ukryj domyślne produkty na stronie głównej
-    var homeProducts = document.querySelectorAll('.home-products');
-    homeProducts.forEach(function(product) {
-        product.classList.add('hidden');
-    });
-
-    // Wczytaj dane JSON z pliku
     fetch('data.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Wystąpił problem podczas pobierania danych.');
-        }
-        return response.json();
-    })
-    .then(jsonData => {
-        // Sprawdź, czy dane JSON zawierają klucz 'item'
-        if (!jsonData || !jsonData.item) {
-            throw new Error('Nie znaleziono danych produktów w pliku JSON.');
-        }
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            allProducts = data.items;
+            displayProducts(allProducts);
 
-        // Przeszukaj dane JSON i znajdź dopasowania
-        var matchingResults = jsonData.item.filter(function(item) {
-            // Sprawdź, czy nazwa produktu, marka lub cena zawiera wprowadzony tekst
-            return item.type.toLowerCase().includes(input) || 
-                   item.brand.toLowerCase().includes(input) || 
-                   item.price.toLowerCase().includes(input);
-        });
-
-        // Podziel wyniki na szczególne i pozostałe
-        var specialResults = matchingResults.filter(function(item) {
-            return item.special === true;
-        });
-
-        var otherResults = matchingResults.filter(function(item) {
-            return item.special !== true;
-        });
-
-        // Wyświetl szczególne produkty
-        if (specialResults.length > 0) {
-            specialResults.forEach(function(item) {
-                var resultItem = document.createElement('div');
-                resultItem.classList.add('product'); // Dodaj klasę dla stylizacji CSS
-                resultItem.innerHTML = `
-                    <a href="link_do_podstrony_produktu.html">
-                        <img src="${item.image}" alt="${item.type}">
-                        <div class="product-info">
-                            <p class="name">${item.type} - ${item.brand}</p>
-                            <p class="price">${item.price}</p>
-                        </div>
-                    </a>
-                `;
-                specialResultsContainer.appendChild(resultItem);
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const type = button.getAttribute('data-type');
+                    const filteredProducts = allProducts.filter(product => product.type === type);
+                    displayProducts(filteredProducts);
+                });
             });
-        } else {
-            specialResultsContainer.textContent = 'Brak wyników.';
-        }
+        })
+        .catch(error => console.error('Error loading the products:', error));
 
-        // Wyświetl inne produkty
-        if (otherResults.length > 0) {
-            otherResults.forEach(function(item) {
-                var resultItem = document.createElement('div');
-                resultItem.classList.add('product'); // Dodaj klasę dla stylizacji CSS
-                resultItem.innerHTML = `
-                    <a href="link_do_podstrony_produktu.html">
-                        <img src="${item.image}" alt="${item.type}">
-                        <div class="product-info">
-                            <p class="name">${item.type} - ${item.brand}</p>
-                            <p class="price">${item.price}</p>
-                        </div>
-                    </a>
-                `;
-                resultsContainer.appendChild(resultItem);
-            });
-        } else {
-            resultsContainer.textContent = 'Brak wyników.';
-        }
+    const searchButton = document.querySelector('.search-container button');
+    searchButton.addEventListener('click', searchProducts);
 
-        // Pokaż sekcje wyników, jeśli są wyniki
-        document.getElementById('szczegolneProduktySection').style.display = specialResults.length > 0 ? 'block' : 'none';
-        document.getElementById('productSection').style.display = otherResults.length > 0 ? 'block' : 'none';
-    })
-    .catch(error => {
-        console.error('Wystąpił błąd podczas wczytywania danych:', error);
-        resultsContainer.textContent = 'Błąd podczas wczytywania danych.';
-        specialResultsContainer.textContent = 'Błąd podczas wczytywania danych.';
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            searchProducts();
+        }
     });
-}
+
+    function searchProducts() {
+        const query = searchInput.value.toLowerCase();
+        const filteredProducts = allProducts.filter(product => {
+            return product.brand.toLowerCase().includes(query) ||
+                   product.processor.toLowerCase().includes(query) ||
+                   product.ram.toLowerCase().includes(query);
+        });
+        displayProducts(filteredProducts);
+    }
+
+    function displayProducts(products) {
+        const items = document.getElementById("topowe");
+        items.innerHTML = "";
+        
+        products.forEach((item) => {
+            items.innerHTML += `
+            <div class="product">        
+                     <div class="zdjecie">
+                        <img src="${item.image}" alt="zdjecie1">
+                    </div>
+                    <div class="captions">
+                        <p><center>SPECYFIKACJA</center></p>
+                        <p class="description">Marka: ${item.brand}</p>
+                        <p class="price">Cena: ${item.price}</p>
+                        <p class="description">Procesor: ${item.processor}</p>
+                        <p class="description">RAM: ${item.ram}</p>
+                </div>
+                </div>
+            `;
+        });
+    }
+});

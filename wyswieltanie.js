@@ -30,15 +30,18 @@ function displayProducts(products) {
     
     products.forEach((item) => {
         items.innerHTML += `
-                <div class="zdjecie">
+        <div class="product">        
+                 <div class="zdjecie">
                     <img src="${item.image}" alt="zdjecie1">
                 </div>
                 <div class="captions">
                     <p><center>SPECYFIKACJA</center></p>
-                    <p>Marka: ${item.brand}</p>
-                    <p>Cena: ${item.price}</p>
-                    <p>Procesor: ${item.processor}</p>
-                    <p>RAM: ${item.ram}</p>
+                    <p class="description">Marka: ${item.brand}</p>
+                    <p class="price">Cena: ${item.price}</p>
+                    <p class="description">Procesor: ${item.processor}</p>
+                    <p class="description">RAM: ${item.ram}</p>
+
+            </div>
             </div>
         `;
     });
