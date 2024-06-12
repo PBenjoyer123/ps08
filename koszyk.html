@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koszyk</title>
     <link rel="stylesheet" href="koszyk.css">
+    
 </head>
-
 <body>
     <header>
         <div class="pasek">
             <div class="logo">
-                <img src="zdjecia/logo.png" alt="Logo"> <!-- Add correct path -->
+                <img src="zdjecia/logo.png" alt="Logo">
             </div>
             <h1>SKLEP AGD</h1>
             <nav>
@@ -35,7 +34,13 @@
         </div>
     </header>
     <h1>Your Cart</h1>
-    <div id="cart-items"></div>
+    <div id="cart-items">
+        <section class="produkty" id="productSection">
+            <div class="products-wrapper" id="products">
+                <!-- Products will be loaded here -->
+            </div>
+        </section>
+    </div>
     <footer>
         <div class="left-column">
             <h3>FAQ</h3>
@@ -49,13 +54,13 @@
             <h4>Email: baki.jawor@gmail.com</h4>
             <div class="social-icons">
                 <div class="facebook-icon">
-                    <a href="#"><img src="facebook.png" alt="Facebook"> <!-- Add correct path --></a>
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
                 </div>
                 <div class="insta-icon">
-                    <a href="#"><img src="instagram.png" alt="Instagram"> <!-- Add correct path --></a>
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
                 </div>
                 <div class="yt-icon">
-                    <a href="#"><img src="yt.png" alt="YouTube"> <!-- Add correct path --></a>
+                    <a href="#"><img src="yt.png" alt="YouTube"></a>
                 </div>
             </div>
         </div>
@@ -65,7 +70,6 @@
             <button>SUBMIT</button>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="koszyk.js"></script>
 </body>
-
 </html>

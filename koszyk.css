@@ -1,4 +1,3 @@
-/* Common styles for both pages */
 body {
     margin: 0;
     padding: 0;
@@ -10,6 +9,15 @@ header {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+.product p.price, .product p.description {
+    color: black;
+    /* Set text color */
+    margin: 0;
+    /* Remove default margin */
+    padding: 10px;
+    /* Add padding */
 }
 
 .pasek {
@@ -71,9 +79,36 @@ nav ul li a:hover {
 }
 
 .cart-item {
+    display: flex;
+    align-items: center;
     margin: 20px;
     padding: 10px;
     border: 1px solid #ccc;
+}
+
+.cart-item img {
+    margin-right: 20px;
+}
+
+.cart-item h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.cart-item p {
+    margin: 5px 0;
+}
+
+.remove-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #ff1a1a;
 }
 
 footer {
@@ -131,7 +166,6 @@ footer {
     transition: background-color 0.3s;
 }
 
-/* Additional hover styles */
 .left-column h3,
 .center-column h3,
 .social-icons a {
@@ -143,4 +177,11 @@ footer {
 .center-column h3:hover,
 .social-icons a:hover {
     text-decoration: underline;
+}
+
+.product, .cart-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
 }

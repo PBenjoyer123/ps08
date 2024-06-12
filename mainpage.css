@@ -188,14 +188,11 @@
     border: 1px solid black;
     border-radius: 15px;
     background-color: white;
-    width: 650px; /* Increase the width */
-    height: 550px; /* Increase the height */
-    margin-right: 120px;
-    margin-left: 20px;
-    margin-bottom: 40px;
-    /* Adjust margins as needed */
-    flex-shrink: 0;
+    width: 650px; /* Adjust width */
+    height: 550px; /* Adjust height */
+    margin-right: 20px;
     overflow: hidden; /* Ensure content does not overflow */
+    flex-shrink: 0;
 }
 
 .product a {
@@ -231,6 +228,20 @@
     text-align: center; /* Center text */
 }
 
+.opis1 {
+    position: relative;
+    width: 100%; /* Set width to occupy available space */
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.product-container {
+    display: flex;
+    align-items: flex-start; /* Align items at the start of the cross-axis (top) */
+    margin-bottom: 20px;
+}
 
 .product:hover .product-info {
     opacity: 1;
