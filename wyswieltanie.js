@@ -44,11 +44,12 @@ function displayProducts(products) {
                 </div>
             </div>
             <div class="opis1">
-                <p><center>Opis</center></p>
+                <p><center><h3>Opis<h3></center></p>
                 <p class="opis2">${item.description}</p>
+                <button class="cart-button" onclick="addToCart('${item.brand}', '${item.image}', '${item.price}')">Dodaj do koszyka</button>
             </div>
         </div>
-        <button class="cart-button" onclick="addToCart('${item.brand}', '${item.image}', '${item.price}')">Dodaj do koszyka</button>
+        
         `;
     });
 }

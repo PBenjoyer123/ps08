@@ -28,13 +28,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Function to display products (assuming it's defined somewhere in your code)
 function displayProducts(products) {
-    // Implementation of displaying products
+    const productsDiv = document.getElementById('products');
+    productsDiv.innerHTML = '';
+    products.forEach(product => {
+        let div = document.createElement('div');
+        div.className = 'product';
+        div.innerHTML = `
+            <img src="${product.image}" alt="${product.brand}">
+            <p>${product.brand}</p>
+            <p>${product.price} PLN</p>
+            <button onclick="addToCart('${product.brand}', '${product.image}', ${parseFloat(product.price)})">Add to Cart</button>
+        `;
+        productsDiv.appendChild(div);
+    });
 }
 
 // Function to add items to the cart
 function addToCart(brand, image, price) {
+    console.log(`Adding to cart: ${brand}, ${price}`); // Log for debugging
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let item = { brand, image, price };
+    let item = { brand, image, price: parseFloat(price) }; // Ensure price is a number
     cart.push(item);
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(brand + ' has been added to the cart');
@@ -57,13 +70,14 @@ function loadCart() {
                     <div class="captions">
                         <p><center>SPECYFIKACJA</center></p>
                         <p class="description">Marka: ${item.brand}</p>
-                        <p class="price">Cena: ${item.price} PLN</p>
+                        <p class="price">Cena: ${parseFloat(item.price).toFixed(2)} PLN</p> <!-- Ensure price is displayed as a fixed-point number -->
                     </div>
                     <button class="remove-button" onclick="removeFromCart(${index})">Remove</button>
                 </div>
             `;
             cartItemsDiv.appendChild(div);
         });
+        updateTotalPrice(); // Update total price after loading cart items
     }
 }
 
@@ -73,6 +87,16 @@ function removeFromCart(index) {
     cart.splice(index, 1);
     localStorage.setItem('cart', JSON.stringify(cart));
     loadCart();
+}
+
+// Function to update the total price
+function updateTotalPrice() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let totalPrice = cart.reduce((total, item) => total + parseFloat(item.price), 0); // Ensure prices are numbers
+    let totalPriceElement = document.getElementById('total-price-value');
+    if (totalPriceElement) {
+        totalPriceElement.textContent = totalPrice.toFixed(2); // Display total price as a fixed-point number
+    }
 }
 
 // Check if we are on the cart page to load the cart items

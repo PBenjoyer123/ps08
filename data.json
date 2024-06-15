@@ -3,30 +3,35 @@
         {
             "image": "zdjecia/samsung.jpg",
             "brand": "Samsung",
-            "price": 2000,
+            "price": 2000.00,
             "processor": "Exynos",
-            "ram": "8GB"
+            "ram": "8GB",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            
         },
         {
             "image": "zdjecia/telefon.webp",
             "brand": "Apple",
-            "price": 3000,
+            "price": 3000.00,
             "processor": "A13 Bionic",
-            "ram": "6GB"
+            "ram": "6GB",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
             "image": "zdjecia/laptop.webp",
             "brand": "Dell",
-            "price": 4000,
+            "price": 4000.00,
             "processor": "Intel i7",
-            "ram": "16GB"
+            "ram": "16GB",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
             "image": "zdjecia/słuchawki.jpg",
             "brand": "Sony",
-            "price": 500,
+            "price": 500.00,
             "processor": "N/A",
-            "ram": "N/A"
+            "ram": "N/A",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
     ]
 }

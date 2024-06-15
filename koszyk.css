@@ -13,11 +13,8 @@ header {
 
 .product p.price, .product p.description {
     color: black;
-    /* Set text color */
     margin: 0;
-    /* Remove default margin */
     padding: 10px;
-    /* Add padding */
 }
 
 .pasek {
@@ -76,6 +73,9 @@ nav ul li a:hover {
     color: white;
     border: none;
     cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 100px;
 }
 
 .cart-item {
@@ -179,9 +179,21 @@ footer {
     text-decoration: underline;
 }
 
-.product, .cart-item {
+.product {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
+    text-align: center;
+}
+
+.total-price {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+    width: 200px;
     text-align: center;
 }
