@@ -54,7 +54,6 @@ function displayProducts(products) {
     });
 }
 
-// Function to add items to the cart
 function addToCart(brand, image, price) {
     console.log('Adding to cart:', { brand, image, price });
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -62,10 +61,10 @@ function addToCart(brand, image, price) {
     cart.push(item);
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(brand + ' has been added to the cart');
-    loadCart(); // Update the cart display after adding the item
+    loadCart(); 
 }
 
-// Function to load and display cart items
+
 function loadCart() {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     console.log('Loading cart:', cart);
@@ -92,7 +91,7 @@ function loadCart() {
     }
 }
 
-// Function to remove items from the cart
+
 function removeFromCart(index) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart.splice(index, 1);
@@ -100,7 +99,39 @@ function removeFromCart(index) {
     loadCart();
 }
 
-// Check if we are on the cart page to load the cart items
 if (document.getElementById('cart-items')) {
     loadCart();
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const slides = sliderWrapper.querySelectorAll('img');
+    const prevButton = document.querySelector('.poprzedni');
+    const nextButton = document.querySelector('.nastepny');
+    let currentIndex = 0;
+
+    function updateSliderPosition() {
+        const offset = -currentIndex * 100;
+        sliderWrapper.style.transform = `translateX(${offset}%)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = slides.length - 1;
+        }
+        updateSliderPosition();
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < slides.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        updateSliderPosition();
+    });
+
+    updateSliderPosition();
+});
